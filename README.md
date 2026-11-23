@@ -79,22 +79,24 @@ A safe, **synthetic** example demonstrates the reasoning process:
 
 [Read the example workflow](docs/workflow-example.md) · [Synthetic alert JSON](examples/synthetic-alert.json)
 
-## Screenshot gallery
+## Screenshots — evidence-first gallery
 
-Authentic screenshots will be added after sanitization. **No generated UI imagery is represented as a real BURHWARD screenshot.**
+Four redacted images from the isolated LuxVPS portfolio build have been prepared for publication. **The binary images are not yet committed to this repository.** Once uploaded to `assets/screenshots/`, they can be embedded here in this recommended order:
 
-| Planned visual | What it will demonstrate | Status |
+| Order | Filename | What the image actually shows |
 | --- | --- | --- |
-| Dashboard | Alert overview and prioritization | Awaiting redacted capture |
-| Alert details | Evidence, event context and analyst review | Awaiting redacted capture |
-| Visual Action Preview | Human-readable proposed change | Awaiting redacted capture |
-| Approval / audit | Decision and result trace | Awaiting redacted capture |
+| 1 | `wazuh-integration.png` | Stored Wazuh alert evidence displayed via demo ingestion; rule 5712, level 10. This does **not** demonstrate a completed Wazuh-to-executor chain. |
+| 2 | `dashboard.png` | Mission Control incident queue and severity summary. Sensor connection remains unavailable; an incident remains unclassified. |
+| 3 | `action-preview.png` | Deterministic **synthetic, non-executed** action preview with scope, TTL, evidence and proposed effects. |
+| 4 | `alert-detail.png` | Synthetic Evidence-First investigation: observed fact, illustrative AI interpretation and prediction are explicitly separated. |
 
-[Screenshot preparation guide](assets/screenshots/README.md) · [Cover/thumbnail design brief](assets/thumbnail/README.md)
+The screenshot set is derived from the **portfolio build**, rather than the unchanged original QA preview. A fifth approval fixture image has not been approved for publication because approvals and auditing are not integrated.
+
+[Preparation and provenance](assets/screenshots/README.md)
 
 ## Evidence & testing
 
-The private repository defines scripts for unit, backend, database, contract, boundary, QA and end-to-end tests, along with linting and a secret-scan command. **Those scripts have not been re-executed for this portfolio release.** No passing test totals or scan findings are invented.
+The private repository defines scripts for unit, backend, database, contract, boundary, QA and end-to-end tests. In the isolated LuxVPS portfolio-polish run, the executing agent **reported 345/345 unit tests passing, ESLint passing and successful default/portfolio builds** (worktree commit `0d1c55b`). These are **agent-reported results, not independently rerun by this portfolio repository**. Playwright E2E tests were **not run** in that pass. There is no claim of production end-to-end readiness.
 
 [Testing and validation](docs/testing-validation.md)
 
