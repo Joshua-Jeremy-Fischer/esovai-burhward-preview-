@@ -1,0 +1,14 @@
+{
+  "scenario": "synthetic-authentication-alert",
+  "source": "synthetic-demo",
+  "event_type": "multiple_failed_logins",
+  "severity": "medium",
+  "asset": "demo-host",
+  "observations": {
+    "failed_attempts": 12,
+    "window_minutes": 5
+  },
+  "proposed_workflow": "analyst_review_required",
+  "execution_performed": false,
+  "note": "Entirely fictional example for documentation; not a Wazuh export"
+}
