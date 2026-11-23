@@ -1,0 +1,33 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+coverage/
+.venv/
+__pycache__/
+*.pyc
+.cache/
+# Sensitive runtime data
+*.log
+logs/
+*.db
+*.sqlite
+*.sql
+*.dump
+backups/
+private/
+internal/
+playwright-report/
+test-results/
+.DS_Store
+.idea/
+.vscode/
