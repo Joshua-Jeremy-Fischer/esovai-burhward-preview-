@@ -1,21 +1,30 @@
 # Testing and validation
 
-This portfolio is **evidence-first**. A script existing is not the same as a successful test run.
+> This portfolio reports a bounded, evidence-based engineering snapshot rather than a claim of deployment readiness.
 
-## Verified repository-level observations
-The private engineering repository defines Node.js scripts for unit, backend, database, QA, contract, boundary, and E2E testing. Its tooling includes ESLint and Playwright, with a separate secret-scan script. The publicly described stack also contains React, Vite and the PostgreSQL client.
+## Known engineering stack
+The private project includes React/Vite, Node.js, the `pg` PostgreSQL client, ESLint, Playwright and Node.js test scripts spanning unit, backend, database, QA, contracts, boundaries and end-to-end workflows.
 
-## Publication status
+## Isolated portfolio run — agent report (2026-11-23)
+- Host: isolated LuxVPS QA machine, not the Hetzner production host
+- Base commit: `e7a9669`
+- Isolated branch: `portfolio/burhward-visual-polish`
+- Reported worktree commit: `0d1c55b` (**not pushed**)
+- Portfolio frontend: separate build served on loopback port 5192
+- Original QA frontend: continued on port 5191
+- Backend and isolated PostgreSQL: health/ready checks reportedly passed
+- **345 of 345 unit tests reportedly passed**
+- ESLint reportedly passed
+- Default and portfolio builds reportedly passed
+- Playwright E2E: **not run**
+- Wazuh: stored alert shown via demo ingestion; no full Wazuh-to-executor integration claimed
+- Approval and audit APIs: 403 for analyst role; fixture view only
 
-| Evidence category | Showcase status |
-|---|---|
-| Test script inventory | Verified from private package manifest |
-| Current execution results | Not independently rerun for this showcase |
-| Sanitized command outputs | Pending |
-| Runtime Wazuh-to-approval demonstration | Pending sanitized evidence |
-| Production end-to-end readiness | **Not claimed** |
+These facts are transcribed from the execution agent's report; this public repository has **not independently reproduced the tests or reviewed raw test output**.
 
-## How evidence will be added
-Each result should show an exact test command, scope, source revision, environment type, status, and known restrictions. Screenshots must be sanitized. Do not publish raw SIEM logs, tokens, addresses or customer details.
-
-See [example evidence workflow](workflow-example.md).
+## Publication and provenance policy
+- Separate **measured outcome** from unverified interpretation.
+- Show real Wazuh evidence only after redaction.
+- Clearly describe synthetic cases as synthetic.
+- Never imply that a preview executed a firewall, endpoint, SQL or other action.
+- Record test scope and untested areas.
